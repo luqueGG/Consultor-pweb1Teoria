@@ -15,3 +15,8 @@ RUN a2enmod cgi && \
     echo '    Require all granted' >> /etc/apache2/apache2.conf && \
     echo '</Directory>' >> /etc/apache2/apache2.conf && \
     echo 'AddHandler cgi-script .cgi .pl' >> /etc/apache2/apache2.conf
+
+COPY html/ /var/www/html/
+COPY css/ /var/www/html/css/ 
+COPY cgi-bin/ /usr/lib/cgi-bin/
+COPY ./Data_Universidades_LAB06.csv /usr/lib/cgi-bin/
