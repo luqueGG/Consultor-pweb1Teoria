@@ -6,8 +6,8 @@
 - **Curso**: _Programación Web I_
 - **Proyecto**: _Consultor de Universidades_
 - **Construccion**: 
-    docker build . -t consultor
-    docker run -d --name tconsultor -p 8080:80 consultor
+- docker build . -t consultor
+- docker run -d --name tconsultor -p 8080:80 consultor
 ---
 
 ### Descripción del Proyecto
