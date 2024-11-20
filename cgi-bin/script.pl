@@ -94,10 +94,15 @@ sub buscar_por_lugar {
     my @resultados;
 
     if (!$departamento || $departamento =~ /^\s*$/) {
-        print "<p>Error: No se proporcionó un valor válido para el departamento.</p>";
+        print "<p>Error: No se proporciono un valor valido para el departamento.</p>";
         return;
     }
-
+    
+    foreach my $universidad (@universidades) {
+        if ($universidad->[7] =~ /^\Q$departamento\E$/i) { # Coincidencia exacta, insensible a mayúsculas
+            push @resultados, $universidad;
+        }
+    }
     return @resultados;
 }
 
