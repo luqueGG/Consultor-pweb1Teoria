@@ -29,3 +29,12 @@ my %despacho = (
     'opcionLugar'     => \&buscar_por_lugar,
     'opcionGestion'   => \&buscar_por_gestion,
 );
+
+my @resultados;
+if (exists $despacho{$seleccion}) {
+    @resultados = $despacho{$seleccion}->($ingreso, $tipo_lugar, $valor_lugar);
+} else {
+    print "<p>Opcion de busqueda no valida.</p>";
+    exit;
+}
+
