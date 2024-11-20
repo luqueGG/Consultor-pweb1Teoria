@@ -38,3 +38,14 @@ if (exists $despacho{$seleccion}) {
     exit;
 }
 
+print <<'HTML';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados de Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de la búsqueda</h1>
+HTML
+
