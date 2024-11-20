@@ -9,3 +9,8 @@ body {
     align-items: center;
     color: #fff;
 }
+
+h1, p, label {
+    margin: 0;
+    padding: 0;
+}
