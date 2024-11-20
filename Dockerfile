@@ -23,3 +23,8 @@ COPY ./Data_Universidades_LAB06.csv /usr/lib/cgi-bin/
 
 RUN find /usr/lib/cgi-bin/ -type f -name "*.pl" -exec dos2unix {} \; && \
     chmod +x /usr/lib/cgi-bin/*.pl
+
+EXPOSE 80
+
+# Iniciar Apache en primer plano
+CMD ["apache2ctl", "-D", "FOREGROUND"]
