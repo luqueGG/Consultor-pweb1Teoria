@@ -20,3 +20,6 @@ COPY html/ /var/www/html/
 COPY css/ /var/www/html/css/ 
 COPY cgi-bin/ /usr/lib/cgi-bin/
 COPY ./Data_Universidades_LAB06.csv /usr/lib/cgi-bin/
+
+RUN find /usr/lib/cgi-bin/ -type f -name "*.pl" -exec dos2unix {} \; && \
+    chmod +x /usr/lib/cgi-bin/*.pl
