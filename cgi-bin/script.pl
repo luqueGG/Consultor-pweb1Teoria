@@ -78,5 +78,16 @@ sub buscar_por_nombre {
     return @resultados;
 }
 
+sub buscar_por_licenciamiento {
+    my ($periodo) = @_;
+    my @resultados;
+    foreach my $universidad (@universidades) {
+        if ($universidad->[6] =~ /\Q$periodo\E/i) {
+            push @resultados, $universidad;
+        }
+    }
+    return @resultados;
+}
+
 
 
