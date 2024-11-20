@@ -89,5 +89,17 @@ sub buscar_por_licenciamiento {
     return @resultados;
 }
 
+sub buscar_por_lugar {
+    my ($departamento) = @_;
+    my @resultados;
+
+    if (!$departamento || $departamento =~ /^\s*$/) {
+        print "<p>Error: No se proporcionó un valor válido para el departamento.</p>";
+        return;
+    }
+
+    return @resultados;
+}
+
 
 
