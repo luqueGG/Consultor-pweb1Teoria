@@ -67,6 +67,16 @@ print <<'HTML';
 </body>
 </html>
 HTML
+sub buscar_por_nombre {
+    my ($nombre) = @_;
+    my @resultados;
+    foreach my $universidad (@universidades) {
+        if ($universidad->[1] =~ /\Q$nombre\E/i) {
+            push @resultados, $universidad;
+        }
+    }
+    return @resultados;
+}
 
 
 
