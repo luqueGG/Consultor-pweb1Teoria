@@ -17,3 +17,9 @@ while (my $row = $csv->getline($fh)) {
     push @universidades, $row;
 }
 close $fh;
+
+my $seleccion = $cgi->param('seleccion') || '';
+my $ingreso = $cgi->param('ingreso') || '';
+my $tipo_lugar = $cgi->param('tipoLugar') || ''; 
+my $valor_lugar = $cgi->param('valorLugar') || ''; 
+
