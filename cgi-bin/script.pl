@@ -11,3 +11,9 @@ my $csvArchivo = "/usr/lib/cgi-bin/Data_Universidades_LAB06.csv";
 my @universidades;
 my @resultados;
 my $csv = Text::CSV->new({ binary => 1, auto_diag => 1 });
+
+open my $fh, '<', $csvArchivo or die "Archivo no puede abrise '$csvArchivo' $!";
+while (my $row = $csv->getline($fh)) {
+    push @universidades, $row;
+}
+close $fh;
