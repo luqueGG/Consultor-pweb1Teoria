@@ -106,5 +106,17 @@ sub buscar_por_lugar {
     return @resultados;
 }
 
+sub buscar_por_gestion {
+    my ($tipo_gestion) = @_;
+    my @resultados;
+    foreach my $universidad (@universidades) {
+        if ($universidad->[2] =~ /\Q$tipo_gestion\E/i) {
+            push @resultados, $universidad;
+        }
+    }
+    return @resultados;
+}
+
+
 
 
