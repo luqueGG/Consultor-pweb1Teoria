@@ -23,3 +23,9 @@ my $ingreso = $cgi->param('ingreso') || '';
 my $tipo_lugar = $cgi->param('tipoLugar') || ''; 
 my $valor_lugar = $cgi->param('valorLugar') || ''; 
 
+my %despacho = (
+    'opcionNombre'    => \&buscar_por_nombre,
+    'opcionLicencia'  => \&buscar_por_licenciamiento,
+    'opcionLugar'     => \&buscar_por_lugar,
+    'opcionGestion'   => \&buscar_por_gestion,
+);
