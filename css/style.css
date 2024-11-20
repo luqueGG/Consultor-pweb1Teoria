@@ -59,4 +59,26 @@ button, select, input {
     background: #ffffff;
     box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
 }
+.btnBuscar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #6a11cb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btnBuscar:hover {
+    background: #2575fc;
+    transform: scale(1.05);
+}
+
+.btnBuscar:active {
+    transform: scale(0.95);
+}
 
