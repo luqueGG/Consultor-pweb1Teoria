@@ -8,6 +8,7 @@
 - **Construccion**: 
 - docker build . -t consultor
 - docker run -d --name tconsultor -p 8080:80 consultor
+- **Video en youtube**: https://www.youtube.com/watch?v=AjzghfXnc94
 ---
 
 ### Descripción del Proyecto
