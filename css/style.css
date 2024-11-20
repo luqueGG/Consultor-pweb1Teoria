@@ -81,4 +81,10 @@ button, select, input {
 .btnBuscar:active {
     transform: scale(0.95);
 }
+@media screen and (max-width: 480px) {
+    .principal {
+        width: 90%;
+        padding: 20px;
+    }
+}
 
